@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3002;
+const port = 3000;
 
 app.get('/', (req, res) => {
   res.send('Hola Mundo, Eimy L. Figueroa, 2020-9190');
