@@ -1,7 +1,7 @@
 const chai = require('chai');
 const expect = chai.expect;
 const supertest = require('supertest');
-const app = require('../app');
+const app = require('../AppPrueba/app');
 
 describe('App', () => {
     it('deberia devolver un saludo en la ruta /', (done) => {
