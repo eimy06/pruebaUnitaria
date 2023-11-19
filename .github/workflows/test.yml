@@ -1,7 +1,7 @@
 name: Node.js Tests
 
 on:
-  push:
+    push:
     branches:
       - main
 
