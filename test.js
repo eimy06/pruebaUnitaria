@@ -1,18 +1,11 @@
-const chai = require('chai');
-const chaiHttp = require('chai-http');
+const request = require('supertest');
 const app = require('./app');
 
-chai.use(chaiHttp);
-const expect = chai.expect;
-
 describe('Aplicación web', () => {
-  it('Debería devolver un saludo en la ruta /', (done) => {
-    chai.request(app)
-      .get('/')
-      .end((err, res) => {
-        expect(res).to.have.status(200);
-        expect(res.text).to.equal('Hola Mundo, Eimy L. Figueroa, 2020-9190');
-        done();
-      });
+  it('Debería devolver un saludo en la ruta /', async () => {
+    const response = await request(app).get('/');
+    
+    expect(response.status).toBe(200);
+    expect(response.text).toBe('Hola Mundo, Eimy L. Figueroa, 2020-9190');
   });
 });
