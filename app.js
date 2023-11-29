@@ -6,7 +6,7 @@ let server;
 
 
 app.get('/', (req, res) => {
-  res.send('Hola Mundo, Eimy L. Figueroa, 2020-9190');
+  res.send('Hola ITLA, Eimy L. Figueroa, 2020-9190');
 });
 
 const startServer = () => {
